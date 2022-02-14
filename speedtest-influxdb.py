@@ -61,8 +61,10 @@ def main():
 
             # Write the data to InfluxDB database
             write_api.write(bucket=INFLUXDB_BUCKET, org=INFLUXDB_ORG, record=json_body)
+            
+            print("Speedtest output sent successfully!")
         else:
-            print ("Speedtest result parsing failed!")
+            print("Speedtest result parsing failed!")
 
 if __name__ == "__main__":
     main()
